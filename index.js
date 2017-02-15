@@ -23,6 +23,9 @@ app.get('/v1/ping', (req, res) => {
 });
 
 app.get('/v1', (req, res) => {
+  const date = new Date();
+  date.setMinutes(date.getMinutes() + 1);
+  res.header('expires', date.toUTCString());
   res.header('cache-control', 'no-cache');
 
   if (!req.query.url) return res.redirect(`https://img.shields.io/badge/api-no url param-${red}.svg`);
