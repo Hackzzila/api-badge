@@ -16,11 +16,15 @@ const stats = json.readSync('stats.json', { writeFrequency: 5000 });
 const red = Color({ h: 0, s: 65, l: 50 }).hex().substr(1);
 const green = Color({ h: 120, s: 65, l: 50 }).hex().substr(1);
 
+app.set('x-powered-by', false);
+
 app.get('/v1/ping', (req, res) => {
   res.status(200).end();
 });
 
 app.get('/v1', (req, res) => {
+  res.header('cache-control', 'no-cache');
+
   if (!req.query.url) return res.redirect(`https://img.shields.io/badge/api-no url param-${red}.svg`);
 
   superagent.get(req.query.url)
