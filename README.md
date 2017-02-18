@@ -1,5 +1,5 @@
 # api-badge
-[![API Status](https://api-badge.hackzzila.com/v1?url=https://api-badge.hackzzila.com/v1/ping/)](https://github.com/Hackzzila/api-badge)
+[![API Status](https://api-badge.hackzzila.com/v1?url=https://api-badge.hackzzila.com/v1/ping)](https://github.com/Hackzzila/api-badge)
 [![Build Status](https://travis-ci.org/Hackzzila/api-badge.svg?branch=master)](https://travis-ci.org/Hackzzila/api-badge)
 
 Simple API status badges.
